@@ -35,7 +35,7 @@ def pinoy_jobs_scraper(user_agent_list):
     last_page = int(last_page_soup.select(page_selector)[0].text)
 
     job_df = pd.DataFrame()
-    page_range = tqdm(range(1566, last_page+1))
+    page_range = tqdm(range(1, last_page+1))
     
     for page in page_range: # scrape all pages
         # prettify progress bar
